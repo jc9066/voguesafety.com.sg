@@ -1,7 +1,6 @@
 @php
   $prefix = Request::route()->getPrefix();
   $route = Route::current()->getName();
- 
 @endphp
 
 
@@ -15,7 +14,7 @@
 				  <!-- logo for regular state and mobile devices -->
 					 <div class="d-flex align-items-center justify-content-center">					 	
 						  <img src="{{ asset('backend/images/logo-dark.png') }}" alt="">
-						  <h3><b>Easy</b> Shop</h3>
+						  <h3><b>Vogue</b> Safety</h3>
 					 </div>
 				</a>
 			</div>
@@ -48,6 +47,21 @@
         $alluser = (auth()->guard('admin')->user()->alluser == 1);
         $adminuserrole = (auth()->guard('admin')->user()->adminuserrole == 1);
 
+        $brand = true; // (auth()->guard('admin')->user()->brand == 1);
+        $category = true; // (auth()->guard('admin')->user()->category == 1);
+        $product = true; // (auth()->guard('admin')->user()->product == 1);
+        $slider = true; // (auth()->guard('admin')->user()->slider == 1);
+        $coupons = true; // (auth()->guard('admin')->user()->coupons == 1);
+        $shipping = true; // (auth()->guard('admin')->user()->shipping == 1);
+        $blog = true; // (auth()->guard('admin')->user()->blog == 1);
+        $setting = true; // (auth()->guard('admin')->user()->setting == 1);
+        $returnorder = true; // (auth()->guard('admin')->user()->returnorder == 1);
+        $review = true; // (auth()->guard('admin')->user()->review == 1);
+        $orders = true; // (auth()->guard('admin')->user()->orders == 1);
+        $stock = true; // (auth()->guard('admin')->user()->stock == 1);
+        $reports = true; // (auth()->guard('admin')->user()->reports == 1);
+        $alluser = true; // (auth()->guard('admin')->user()->alluser == 1);
+        $adminuserrole = true; // (auth()->guard('admin')->user()->adminuserrole == 1);
         @endphp
 
 
