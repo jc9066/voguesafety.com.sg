@@ -2,7 +2,7 @@
   
   <!-- ============================================== TOP MENU ============================================== -->
   <div class="top-bar animate-dropdown">
-    <div class="container">
+    <div class="container-fluid">
       <div class="header-top-inner">
         <div class="cnt-account">
           <ul class="list-unstyled">
@@ -63,7 +63,7 @@
   <!-- /.header-top --> 
   <!-- ============================================== TOP MENU : END ============================================== -->
   <div class="main-header">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
 
@@ -157,7 +157,7 @@
   
   <!-- ============================================== NAVBAR ============================================== -->
   <div class="header-nav animate-dropdown">
-    <div class="container">
+    <div class="container-fluid">
       <div class="yamm navbar navbar-default" role="navigation">
         <div class="navbar-header">
        <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> 
