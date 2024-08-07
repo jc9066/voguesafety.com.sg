@@ -73,15 +73,15 @@
 
 
           <!-- ============================================================= LOGO ============================================================= -->
-          <div class="logo"> <a href="{{ url('/') }}"> <img src="" alt="logo"> </a> </div>
+          <div class="logo"> <a href="{{ url('/assets/images/logo.png') }}"> <img src="assets/images/logo.png" alt="logo"> </a> </div>
           <!-- /.logo --> 
           <!-- ============================================================= LOGO : END ============================================================= --> </div>
         <!-- /.logo-holder -->
         
-        <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder"> 
+        <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder "> 
           <!-- /.contact-row --> 
           <!-- ============================================================= SEARCH AREA ============================================================= -->
-          <div class="search-area">
+          <div class="search-area hidden">
             <form method="post" action="{{ route('product.search') }}">
               @csrf
               <div class="control-group">

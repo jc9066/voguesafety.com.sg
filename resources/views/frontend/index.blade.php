@@ -653,17 +653,17 @@ Home Easy Online Shop
 
 <div class='container-fluid'>
     <div class='row' style="margin-bottom:15px;">
-      <div class='col-md-4'> 
+      <!-- <div class='col-md-12'> 
         <div class="sidebar-widget newsletter wow fadeInUp outer-bottom-small" style="border-radius:15px;">
 
         </div>
-      </div>
-      <div class='col-md-8'> 
+      </div> -->
+      <div class='col-md-12'> 
         <div id="product-tabs-slider" class="scroll-tabs wow fadeInUp" style="border-radius:15px;">
             <div class="more-info-tab clearfix ">
-              <h3 class="new-product-title pull-left"></h3>
+              <h3 class="new-product-title pull-left">Popular List</h3>
               <ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
-                <li class="active"><a data-transition-type="backSlide" href="#all" data-toggle="tab"><b>Popular List</b></a></li>
+                <!-- <li class="active"><a data-transition-type="backSlide" href="#all" data-toggle="tab"><b>Popular List</b></a></li> -->
                 <!-- <li><a data-transition-type="backSlide" href="#smartphone" data-toggle="tab"></a></li> -->
                 <!-- <li><a data-transition-type="backSlide" href="#laptop" data-toggle="tab">Barefooters</a></li>
                 <li><a data-transition-type="backSlide" href="#apple" data-toggle="tab">E-Track</a></li> -->
@@ -673,7 +673,7 @@ Home Easy Online Shop
             <div class="tab-content outer-top-xs">
               <div class="tab-pane in active" id="all">
                 <div class="product-slider">
-                  <div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="3">
+                  <div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="5">
                     <div class="item item-carousel">
                       <div class="products">
                         <div class="product">
@@ -681,7 +681,7 @@ Home Easy Online Shop
                             <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/07/Elten_769551_neu-300x300.jpg" alt=""></a> </div>
                             <!-- /.image -->
                             
-                            <!-- <div class="tag new"><span>new</span></div> -->
+                            <div class="tag hot"><span>Hot</span></div>
                           </div>
                           <!-- /.product-image -->
                           
@@ -723,7 +723,7 @@ Home Easy Online Shop
                             <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2023/01/t-66A7384892E7D27446F342CE476B79EF-300x300.jpg" alt=""></a> </div>
                             <!-- /.image -->
                             
-                            <!-- <div class="tag hot"><span>hot</span></div> -->
+                            <div class="tag sale"><span>Sales</span></div>
                           </div>
                           <!-- /.product-image -->
                           
@@ -1727,9 +1727,12 @@ Home Easy Online Shop
   <img src="assets/images/banners/banner2.png" style="width:100%;object-fit:fill;margin-bottom:15px;border-radius:5px;">
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid py-5">
+  <div class="py-md-5 text-center">  
+    <h1><b>Latest Form Blog</b></h1>
+    <h3>ckjdscnvdsklc</h3>
+  </div>
   <section class="section latest-blog outer-bottom-vs wow fadeInUp" style="border-radius:15px;">
-    <h3 class="section-title">latest form blog</h3>
       <div class="blog-slider-container outer-top-xs">
         <div class="owl-carousel blog-slider custom-carousel">
           <div class="item">
@@ -1836,7 +1839,79 @@ Home Easy Online Shop
   </section>
 </div>
 
-<div class="container-fluid">
-  
+<div class="container-fluid" >
+  <section class="section wow fadeInUp" style="padding: 20px 20px;">
+    <div class="row" style="height:100%;max-height:650px;background-color:black;border-radius: 15px !important;">
+      <div class='col-md-6 col-xs-12' border:1px solid red;>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/5X0SdLifKug" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class='col-md-6 col-xs-12'>
+        <div class="row">
+          <div class='col-md-6 col-xs-12'>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/VGlB5bSDPTQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class='col-md-6 col-xs-12'>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/lg5CgJqql5U" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class='col-md-6 col-xs-12'>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/X0-Ls20wfik" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class='col-md-6 col-xs-12'>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/binKkJrfO4M" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="container-fluid py-md-5">
+  <div class="py-md-5 text-center">  
+    <h1><b>What People Say About Us</b></h1>
+    <h4>TESTIMONIALS</h4>
+  </div>
+  <section class="section wow fadeInUp new-arriavls" style="border-radius:15px;">
+    <div class="sidebar-widget  wow fadeInUp" style="border-radius:15px;">
+      <div id="advertisement" class="advertisement">
+        <div class="item">
+          <div class="avatar"><img src="assets/images/testimonials/member1.png" alt="Image"></div>
+          <div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
+          <div class="clients_author">John Doe <span>Abc Company</span> </div>
+          <!-- /.container-fluid --> 
+        </div>
+        <!-- /.item -->
+        
+        <div class="item">
+          <div class="avatar"><img src="assets/images/testimonials/member3.png" alt="Image"></div>
+          <div class="testimonials"><em>"</em>Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
+          <div class="clients_author">Stephen Doe <span>Xperia Designs</span> </div>
+        </div>
+        <!-- /.item -->
+        
+        <div class="item">
+          <div class="avatar"><img src="assets/images/testimonials/member2.png" alt="Image"></div>
+          <div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
+          <div class="clients_author">Saraha Smith <span>Datsun &amp; Co</span> </div>
+          <!-- /.container-fluid --> 
+        </div>
+        <!-- /.item --> 
+        
+      </div>
+      <!-- /.owl-carousel --> 
+    </div>  
+    <!-- /.home-owl-carousel --> 
+  </section>
 </div>
 @endsection

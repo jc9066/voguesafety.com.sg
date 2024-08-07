@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 @php
-$seo = App\Models\Seo::find(1);
+//$seo = App\Models\Seo::find(1);
 @endphp
 <head>
 <!-- Meta -->
@@ -17,6 +17,7 @@ $seo = App\Models\Seo::find(1);
 
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendor_components/bootstrap/dist/css/bootstrap-grid.css') }}">
 
 <!-- Customizable CSS -->
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/main.css') }}">
