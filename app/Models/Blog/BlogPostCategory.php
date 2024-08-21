@@ -9,4 +9,5 @@ class BlogPostCategory extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    protected $table = "blog_post_categories";
 } 

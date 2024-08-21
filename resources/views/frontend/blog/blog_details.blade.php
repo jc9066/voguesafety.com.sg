@@ -8,7 +8,7 @@
  
 
  <div class="breadcrumb">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
 				<li><a href="#">Home</a></li>
@@ -19,12 +19,12 @@
 </div><!-- /.breadcrumb -->
 
 <div class="body-content">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="blog-page">
 				<div class="col-md-9">
 					<div class="blog-post wow fadeInUp">
-	<img class="img-responsive" src="{{ asset($blogpost->post_image) }}" alt="">
+	<img class="img-responsive" src="{{ ($blogpost->post_image) }}" alt="">
 	
 
 	<h1>@if(session()->get('language') == 'hindi') {{ $blogpost->post_title_hin }} @else {{ $blogpost->post_title_en }} @endif</h1>

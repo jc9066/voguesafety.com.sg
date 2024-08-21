@@ -10,9 +10,9 @@ class BlogPost extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    protected $table = "blog_posts";
 
-
-     public function category(){
+    public function category(){
     	return $this->belongsTo(BlogPostCategory::class,'category_id','id');
     }
 

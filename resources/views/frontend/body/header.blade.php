@@ -233,7 +233,7 @@
      <li class="{{ Request::routeIs('about.page') ? 'active' : '' }}"> <a href="{{ route('about.page') }}">About Us</a> </li>
      <li class="{{ Request::routeIs('safety.page') ? 'active' : '' }}"> <a href="{{ route('safety.page') }}">WHY Vogue Safety ?</a></li>
      <li class="{{ Request::routeIs('technologies.page') ? 'active' : '' }}"> <a href="{{ route('technologies.page') }}">Technologies</a></li>
-     <li class="{{ Request::routeIs('store.page') ? 'active' : '' }}"> <a href="{{ route('store.page') }}">Our Store</a> </li>
+     <li class="{{ Request::routeIs('shop.page') ? 'active' : '' }}"> <a href="{{ route('shop.page') }}">Our Store</a> </li>
                
                 <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a> </li>
 

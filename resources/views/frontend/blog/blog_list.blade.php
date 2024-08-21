@@ -9,7 +9,7 @@ Blog Page
 
 
 <div class="breadcrumb">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
 				<li><a href="#">Home</a></li>
@@ -20,7 +20,7 @@ Blog Page
 </div><!-- /.breadcrumb -->
 
 <div class="body-content">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="blog-page">
 				<div class="col-md-9">
@@ -29,7 +29,7 @@ Blog Page
 
 				@foreach($blogpost as $blog)
 					<div class="blog-post  wow fadeInUp">
-	<a href="blog-details.html"><img class="img-responsive" src="{{ asset($blog->post_image) }}" alt=""></a>
+	<a href="blog-details.html"><img class="img-responsive" src="{{ $blog->post_image }}" alt=""></a>
 
 	<h1><a href="blog-details.html"> @if(session()->get('language') == 'hindi') {{ $blog->post_title_hin }} @else {{ $blog->post_title_en }} @endif</a></h1>
 	 

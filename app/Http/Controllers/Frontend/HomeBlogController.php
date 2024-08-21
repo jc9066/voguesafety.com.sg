@@ -6,13 +6,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Blog\BlogPostCategory;
 use App\Models\BlogPost;
+use Illuminate\Support\Facades\DB;
 
 class HomeBlogController extends Controller
 {
     public function AddBlogPost(){
 
-    	$blogcategory = BlogPostCategory::latest()->get();
-    	$blogpost = BlogPost::latest()->get();
+    	$blogcategory = DB::table('blog_post_categories')->get();//BlogPostCategory::latest()->get();
+    	$blogpost = DB::table('blog_posts')->get();//BlogPost::latest()->get();
     	return view('frontend.blog.blog_list',compact('blogpost','blogcategory'));
 
     } // end method 
