@@ -1,54 +1,66 @@
 @extends('frontend.main_master')
 @section('content')
 @section('title')
-Home Easy Online Shop
+Vogue Safety
 @endsection
-
 <div id="hero">
-  <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm" style="height:600px;">
-    <div class="item" style="height:650px;background-image: url('https://voguesafety.com.sg/wp-content/uploads/2021/06/12851_JO_SLIM_LIME_LOW_ESD_S3_03-18.jpg');">
-      <div class="container-fluid">
-        <div class="caption bg-color vertical-center text-left">
-          <div class="slider-header fadeInDown-1">Top Brands</div>
-          <div class="big-text fadeInDown-1"> New Collections </div>
-          <div class="excerpt fadeInDown-2 hidden-xs"> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span> </div>
-          <div class="button-holder fadeInDown-3"> <a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a> </div>
-        </div>
-      </div>
-    </div>
-    <div class="item" style="height:650px;background-image: url('https://voguesafety.com.sg/wp-content/uploads/2021/06/89611_CRUZ_GTX_F2A_06-29.jpg');">
-      <div class="container-fluid">
-        <div class="caption bg-color vertical-center text-left">
-          <div class="slider-header fadeInDown-1">Spring 2016</div>
-          <div class="big-text fadeInDown-1"> Women <span class="highlight">Fashion</span> </div>
-          <div class="excerpt fadeInDown-2 hidden-xs"> <span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</span> </div>
-          <div class="button-holder fadeInDown-3"> <a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a> </div>
-        </div>
+  <div class="image" style="height:650px;"> 
+    <img 
+      src="{!! asset('frontend/assets/img/home-hero.png') !!}"
+      srcset="
+          {{ asset('frontend/assets/img/home-hero.png') }} 320w,
+          {{ asset('frontend/assets/img/home-hero.png') }} 480w,
+          {{ asset('frontend/assets/img/home-hero.png') }} 800w,
+          {{ asset('frontend/assets/img/home-hero.png') }} 1200w
+      "
+      sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 800px) 800px, 100vw"
+      style="z-index:1;width:100%;height:100%;object-fit:cover;"
+      alt="vogue-safety-shoes"
+      loading="lazy"
+    >
+    <div class="container-fluid" style="z-index:2;margin-top:-500px;">
+      <div class="text-left">
+        <h1 class="text-uppercase" style="color:white;">Vogue Safety</h1>
+        <h1 class="big-text" style="line-height:inherit;letter-spacing:1px;">Our New Collections </h1>
+        <h3 style="color:white;line-height:inherit;letter-spacing:1px;">Safety shoes give the wearer a genuine feeling of safety.</h3>
+        <a href="">
+          <img 
+          src="{!! asset('frontend/assets/img/btn-shopnow.png') !!}"
+          srcset="
+              {{ asset('frontend/assets/img/btn-shopnow.png') }} 320w,
+              {{ asset('frontend/assets/img/btn-shopnow.png') }} 480w,
+              {{ asset('frontend/assets/img/btn-shopnow.png') }} 800w,
+              {{ asset('frontend/assets/img/btn-shopnow.png') }} 1200w
+          "
+          style="padding:10px;width:300px;object-fit:contain;"
+          alt="vogue-safety-shoes"
+          loading="lazy"
+          >
+        </a>
+
       </div>
     </div>
   </div>
 </div>
 
-<div class="container-fluid" style="margin-top:-50px;">
-  <section class="section wow fadeInUp new-arriavls" style="padding: 10px 10px; border-radius: 20px !important;">
-    <div id="brands-carousel" class="logo-slider wow fadeInUp">
+<!-- <div class="container-fluid" style="margin-top:-80px;">
+  <section class="section wow new-arriavls" style="padding: 10px 10px; border-radius: 20px !important;background-color:#F1FBF8;">
+    <div id="brands-carousel" class="logo-slider wow">
       <div class="logo-slider-inner">
         <div id="brand-slider" class="owl-carousel brand-slider custom-carousel owl-theme">
-          <div class="item m-t-15"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand1.png" src="assets/images/blank.gif" alt=""> </a> </div>
-          <div class="item m-t-10"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand2.png" src="assets/images/blank.gif" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand3.png" src="assets/images/blank.gif" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand4.png" src="assets/images/blank.gif" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand5.png" src="assets/images/blank.gif" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand6.png" src="assets/images/blank.gif" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand2.png" src="assets/images/blank.gif" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand4.png" src="assets/images/blank.gif" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand1.png" src="assets/images/blank.gif" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand5.png" src="assets/images/blank.gif" alt=""> </a> </div>
+          <div class="item m-t-15"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner1.png') }}" src="{{ asset('frontend/assets/img/partner/partner1.png') }}" alt=""> </a> </div>
+          <div class="item m-t-10"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner2.png') }}" src="{{ asset('frontend/assets/img/partner/partner2.png') }}" alt=""> </a> </div>
+          <div class="item"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner3.png') }}" src="{{ asset('frontend/assets/img/partner/partner3.png') }}" alt=""> </a> </div>
+          <div class="item"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner4.png') }}" src="{{ asset('frontend/assets/img/partner/partner4.png') }}" alt=""> </a> </div>
+          <div class="item"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner5.png') }}" src="{{ asset('frontend/assets/img/partner/partner5.png') }}" alt=""> </a> </div>
+          <div class="item"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner6.png') }}" src="{{ asset('frontend/assets/img/partner/partner6.png') }}" alt=""> </a> </div>
+          <div class="item"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner7.png') }}" src="{{ asset('frontend/assets/img/partner/partner7.png') }}" alt=""> </a> </div>
+          <div class="item"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner8.png') }}" src="{{ asset('frontend/assets/img/partner/partner7.png') }}" alt=""> </a> </div>
         </div>
       </div>
     </div>
   </section>
-</div>
+</div> -->
 
 <div class='container-fluid'>
     <div class='row' style="margin-bottom: 15px;">
@@ -393,7 +405,7 @@ Home Easy Online Shop
         </div>
       </div>
       <div class='col-md-9'> 
-        <div class="best-deal wow fadeInUp outer-bottom-xs" style="border-radius:15px;">
+        <div class="best-deal wow outer-bottom-xs" style="border-radius:15px;">
               <h2 class="section-title">Best seller</h2>
               <div class="sidebar-widget-body outer-top-xs">
                 <div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
@@ -402,24 +414,41 @@ Home Easy Online Shop
                       <div class="product">
                         <div class="product-micro">
                           <div class="row product-micro-row">
-                            <div class="col col-xs-5">
-                              <div class="product-image">
-                                <div class="image"> <a href="#"> <img src="https://voguesafety.com.sg/wp-content/uploads/2018/07/Elten_769551_neu-300x300.jpg" alt=""> </a> </div>
-                                <!-- /.image --> 
-                                
-                              </div>
-                              <!-- /.product-image --> 
-                            </div>
-                            
-                            <div class="col2 col-xs-7">
                               <div class="product-info">
-                                <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
-                                <div class="rating rateit-small"></div>
-                                <div class="product-price"> <span class="price"> $450.99 </span> </div>
-                                <!-- /.product-price --> 
+                                <div class="product-image">
+                                  <div class="p-5"> 
+                                    <a href="#"> 
+                                      <img src="{!! asset('frontend/assets/img/Elten_769551_neu-300x300.jpg') !!}" alt=""> 
+                                    </a> 
+                                    <div class="px-3 pb-3">
+                                      <h3 class="name pt-3"><a href="#">Floral Print Buttoned</a></h3>
+                                      <div class="rating rateit-small"></div>
+                                      <div class="product-price" style="display:flex;justify-content:space-between;align-items:center;"> 
+                                      <span class="price" style="flex-grow: 1;"> $450.99 
+                                        <span class="price-before-discount"> $ 800</span> 
+                                        <span class="alert alert-danger" style="width:100px;padding:2px;border-radius:25px;"> 30 %</span>
+                                      </span> 
+                                      
+                                      <img 
+                                        src="{!! asset('frontend/assets/img/btn-addtocart.png') !!}"
+                                        srcset="
+                                            {{ asset('frontend/assets/img/btn-addtocart.png') }} 320w,
+                                            {{ asset('frontend/assets/img/btn-addtocart.png') }} 480w,
+                                            {{ asset('frontend/assets/img/btn-addtocart.png') }} 800w,
+                                            {{ asset('frontend/assets/img/btn-addtocart.png') }} 1200w
+                                        "
+                                        style="margin-top:-5%;padding-right:0px;width:35px;object-fit:contain;"
+                                        alt="vogue-safety-shoes"
+                                        loading="lazy"
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- /.image --> 
+                                  
+                                </div>
                                 
                               </div>
-                            </div>
                             
                           </div>
                           <!-- /.product-micro-row --> 
@@ -430,24 +459,41 @@ Home Easy Online Shop
                       <div class="product">
                         <div class="product-micro">
                           <div class="row product-micro-row">
-                            <div class="col col-xs-5">
-                              <div class="product-image">
-                                <div class="image"> <a href="#"> <img src="https://voguesafety.com.sg/wp-content/uploads/2023/01/t-66A7384892E7D27446F342CE476B79EF-300x300.jpg" alt=""> </a> </div>
-                                <!-- /.image --> 
-                                
-                              </div>
-                              <!-- /.product-image --> 
-                            </div>
-                            
-                            <div class="col2 col-xs-7">
                               <div class="product-info">
-                                <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
-                                <div class="rating rateit-small"></div>
-                                <div class="product-price"> <span class="price"> $450.99 </span> </div>
-                                <!-- /.product-price --> 
+                                <div class="product-image">
+                                  <div class="p-5"> 
+                                    <a href="#"> 
+                                      <img src="{!! asset('frontend/assets/img/Elten_769551_neu-300x300.jpg') !!}" alt=""> 
+                                    </a> 
+                                    <div class="px-3 pb-3">
+                                      <h3 class="name pt-3"><a href="#">Floral Print Buttoned</a></h3>
+                                      <div class="rating rateit-small"></div>
+                                      <div class="product-price" style="display:flex;justify-content:space-between;align-items:center;"> 
+                                      <span class="price" style="flex-grow: 1;"> $450.99 
+                                        <span class="price-before-discount"> $ 800</span> 
+                                        <span class="alert alert-danger" style="width:100px;padding:2px;border-radius:25px;"> 30 %</span>
+                                      </span> 
+                                      
+                                      <img 
+                                        src="{!! asset('frontend/assets/img/btn-addtocart.png') !!}"
+                                        srcset="
+                                            {{ asset('frontend/assets/img/btn-addtocart.png') }} 320w,
+                                            {{ asset('frontend/assets/img/btn-addtocart.png') }} 480w,
+                                            {{ asset('frontend/assets/img/btn-addtocart.png') }} 800w,
+                                            {{ asset('frontend/assets/img/btn-addtocart.png') }} 1200w
+                                        "
+                                        style="margin-top:-5%;padding-right:0px;width:35px;object-fit:contain;"
+                                        alt="vogue-safety-shoes"
+                                        loading="lazy"
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- /.image --> 
+                                  
+                                </div>
                                 
                               </div>
-                            </div>
                             
                           </div>
                           <!-- /.product-micro-row --> 
@@ -648,1091 +694,1299 @@ Home Easy Online Shop
 </div>
 
 <div class="container-fluid">
-  <img src="assets/images/banners/banner1.png" style="width:100%;object-fit:fill;margin-bottom:15px;border-radius:5px;">
+  <img 
+    src="{!! asset('frontend/assets/img/home-banner2.0.png') !!}"
+    srcset="
+        {{ asset('frontend/assets/img/home-banner2.0.png') }} 320w,
+        {{ asset('frontend/assets/img/home-banner2.0.png') }} 480w,
+        {{ asset('frontend/assets/img/home-banner2.0.png') }} 800w,
+        {{ asset('frontend/assets/img/home-banner2.0.png') }} 1200w
+    "
+    sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 800px) 800px, 100vw"
+    style="width: 100%; height:100%;object-fit:cover; z-index: 1;"
+    alt="vogue-safety-shoes"
+    loading="lazy"
+  >
+  <img 
+    src="{!! asset('frontend/assets/img/home-banner-text2.0.png') !!}"
+    srcset="
+        {{ asset('frontend/assets/img/home-banner-text2.0.png') }} 320w,
+        {{ asset('frontend/assets/img/home-banner-text2.0.png') }} 480w,
+        {{ asset('frontend/assets/img/home-banner-text2.0.png') }} 800w,
+        {{ asset('frontend/assets/img/home-banner-text2.0.png') }} 1200w
+    "
+    sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 800px) 800px, 100vw"
+    style="width:40%;object-fit: contain; z-index: 2; margin-top: -50%; margin-left:50px;"
+    alt="vogue-safety-shoes-2"
+    loading="lazy"
+  >
 </div>
 
-<div class='container-fluid'>
-    <div class='row' style="margin-bottom:15px;">
-      <!-- <div class='col-md-12'> 
-        <div class="sidebar-widget newsletter wow fadeInUp outer-bottom-small" style="border-radius:15px;">
-
-        </div>
-      </div> -->
-      <div class='col-md-12'> 
-        <div id="product-tabs-slider" class="scroll-tabs wow fadeInUp" style="border-radius:15px;">
-            <div class="more-info-tab clearfix ">
-              <h3 class="new-product-title pull-left">Popular List</h3>
-              <ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
-                <!-- <li class="active"><a data-transition-type="backSlide" href="#all" data-toggle="tab"><b>Popular List</b></a></li> -->
-                <!-- <li><a data-transition-type="backSlide" href="#smartphone" data-toggle="tab"></a></li> -->
-                <!-- <li><a data-transition-type="backSlide" href="#laptop" data-toggle="tab">Barefooters</a></li>
-                <li><a data-transition-type="backSlide" href="#apple" data-toggle="tab">E-Track</a></li> -->
-              </ul>
-              <!-- /.nav-tabs --> 
-            </div>
-            <div class="tab-content outer-top-xs">
-              <div class="tab-pane in active" id="all">
-                <div class="product-slider">
-                  <div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="5">
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/07/Elten_769551_neu-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag hot"><span>Hot</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button data-toggle="tooltip" class="btn btn-primary icon" type="button" title="Add Cart"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2023/01/t-66A7384892E7D27446F342CE476B79EF-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag sale"><span>Sales</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_72151_neu-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <!-- <div class="tag sale"><span>sale</span></div> -->
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/08/ELTEN_76651_NEU.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <!-- <div class="tag sale"><span>sale</span></div> -->
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/04/Elten_74761_neu-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <!-- <div class="tag hot"><span>hot</span></div> -->
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2021/02/92260_KIOWA_BOA-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <!-- <div class="tag new"><span>new</span></div> -->
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item --> 
-                  </div>
-                  <!-- /.home-owl-carousel --> 
-                </div>
-                <!-- /.product-slider --> 
-              </div>
-              <!-- /.tab-pane -->
-              
-              <div class="tab-pane" id="smartphone">
-                <div class="product-slider">
-                  <div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/07/elten_729671-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag sale"><span>sale</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/06/ELTEN_76628_NEU-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag new"><span>new</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/06/ELTEN_76628_NEU-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag sale"><span>sale</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_767541_neu-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag new"><span>new</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_767541_neu-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag hot"><span>hot</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/08/ELTEN_76327_NEU-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag hot"><span>hot</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item --> 
-                  </div>
-                  <!-- /.home-owl-carousel --> 
-                </div>
-                <!-- /.product-slider --> 
-              </div>
-              <!-- /.tab-pane -->
-              
-              <div class="tab-pane" id="laptop">
-                <div class="product-slider">
-                  <div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/04/Elten_74761_neu-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag new"><span>new</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_763341_NEU-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag new"><span>new</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/04/Elten_74761_neu-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag sale"><span>sale</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img src="https://voguesafety.com.sg/wp-content/uploads/2018/07/elten_729671-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag hot"><span>hot</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/08/ELTEN_76651_NEU.jpg" alt="image"></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag hot"><span>hot</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img src="https://voguesafety.com.sg/wp-content/uploads/2023/01/t-66A7384892E7D27446F342CE476B79EF-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag sale"><span>sale</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Apple Iphone 5s 32GB</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item --> 
-                  </div>
-                  <!-- /.home-owl-carousel --> 
-                </div>
-                <!-- /.product-slider --> 
-              </div>
-              <!-- /.tab-pane -->
-              
-              <div class="tab-pane" id="apple">
-                <div class="product-slider">
-                  <div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_72151_neu-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag sale"><span>sale</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_767541_neu-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag hot"><span>hot</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_767541_neu-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag sale"><span>sale</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_763341_NEU-300x300.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag new"><span>new</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="assets/images/products/p13.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag new"><span>new</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item -->
-                    
-                    <div class="item item-carousel">
-                      <div class="products">
-                        <div class="product">
-                          <div class="product-image">
-                            <div class="image"> <a href="detail.html"><img  src="assets/images/products/p14.jpg" alt=""></a> </div>
-                            <!-- /.image -->
-                            
-                            <div class="tag hot"><span>hot</span></div>
-                          </div>
-                          <!-- /.product-image -->
-                          
-                          <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html">Samsung Galaxy S4</a></h3>
-                            <div class="rating rateit-small"></div>
-                            <div class="description"></div>
-                            <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                            <!-- /.product-price --> 
-                            
-                          </div>
-                          <!-- /.product-info -->
-                          <div class="cart clearfix animate-effect">
-                            <div class="action">
-                              <ul class="list-unstyled">
-                                <li class="add-cart-button btn-group">
-                                  <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                  <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                                </li>
-                                <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                              </ul>
-                            </div>
-                            <!-- /.action --> 
-                          </div>
-                          <!-- /.cart --> 
-                        </div>
-                        <!-- /.product --> 
-                        
-                      </div>
-                      <!-- /.products --> 
-                    </div>
-                    <!-- /.item --> 
-                  </div>
-                  <!-- /.home-owl-carousel --> 
-                </div>
-                <!-- /.product-slider --> 
-              </div>
-              <!-- /.tab-pane --> 
-              
-            </div>
-            <!-- /.tab-content --> 
+<div class='container-fluid pt-3'>
+  <div class="row">
+    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+      <div id="product-tabs-slider" class="scroll-tabs wow" style="border-radius:15px;">
+          <div class="more-info-tab clearfix ">
+            <h3 class="new-product-title pull-left">Popular List</h3>
+            <ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
+              <!-- <li class="active"><a data-transition-type="backSlide" href="#all" data-toggle="tab"><b>Popular List</b></a></li> -->
+              <li class="active"><a data-transition-type="backSlide" href="#smartphone" data-toggle="tab"></a></li>
+              <!-- <li><a data-transition-type="backSlide" href="#laptop" data-toggle="tab">Barefooters</a></li>
+              <li><a data-transition-type="backSlide" href="#apple" data-toggle="tab">E-Track</a></li> -->
+            </ul>
+            <!-- /.nav-tabs --> 
           </div>
+          <div class="tab-content outer-top-xs">
+            <div class="tab-pane in active" id="all">
+              <div class="product-slider">
+                <div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="5">
+                  <div class="item">
+                    <div class="products">
+                      <div class="product py-5">
+                        <div class="product-image">
+                          <div class="image p-5"> 
+                            <a href="detail.html">
+                              <img  src="{!! asset('frontend/assets/img/Elten_769551_neu-300x300.jpg') !!}" alt="">
+                            </a> 
+                          </div>
+                          <!-- /.image -->
+                          
+                          <!-- <div class="tag hot"><span>Hot</span></div> -->
+                        </div>
+                        <!-- /.product-image -->
+                        <hr class="pt-3" style="color:black;">
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> 
+                            <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> 
+                          </div>
+                          <div style="text-align:right;padding:5px;margin-top:-25%">                              
+                            <img 
+                              class="pr-0"
+                              src="{!! asset('frontend/assets/img/btn-addtocart.png') !!}"
+                              srcset="
+                                  {{ asset('frontend/assets/img/btn-addtocart.png') }} 320w,
+                                  {{ asset('frontend/assets/img/btn-addtocart.png') }} 480w,
+                                  {{ asset('frontend/assets/img/btn-addtocart.png') }} 800w,
+                                  {{ asset('frontend/assets/img/btn-addtocart.png') }} 1200w
+                              "
+                              
+                              style="width:35px;object-fit:contain;"
+                              alt="vogue-safety-shoes"
+                              loading="lazy"
+                            >
+                          </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action text-center">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button data-toggle="tooltip" class="btn btn-primary icon" type="button" title="Add Cart"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Compare"> 
+                                <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2023/01/t-66A7384892E7D27446F342CE476B79EF-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <!-- <div class="tag sale"><span>Sales</span></div> -->
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_72151_neu-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <!-- <div class="tag sale"><span>sale</span></div> -->
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/08/ELTEN_76651_NEU.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <!-- <div class="tag sale"><span>sale</span></div> -->
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/04/Elten_74761_neu-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <!-- <div class="tag hot"><span>hot</span></div> -->
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2021/02/92260_KIOWA_BOA-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <!-- <div class="tag new"><span>new</span></div> -->
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item --> 
+                </div>
+                <!-- /.home-owl-carousel --> 
+              </div>
+              <!-- /.product-slider --> 
+            </div>
+            <!-- /.tab-pane -->
+            
+            <div class="tab-pane" id="smartphone">
+              <div class="product-slider">
+                <div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/07/elten_729671-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag sale"><span>sale</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/06/ELTEN_76628_NEU-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag new"><span>new</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/06/ELTEN_76628_NEU-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag sale"><span>sale</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_767541_neu-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag new"><span>new</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_767541_neu-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag hot"><span>hot</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/08/ELTEN_76327_NEU-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag hot"><span>hot</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item --> 
+                </div>
+                <!-- /.home-owl-carousel --> 
+              </div>
+              <!-- /.product-slider --> 
+            </div>
+            <!-- /.tab-pane -->
+            
+            <div class="tab-pane" id="laptop">
+              <div class="product-slider">
+                <div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/04/Elten_74761_neu-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag new"><span>new</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <!-- <div class="rating rateit-small"></div> -->
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_763341_NEU-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag new"><span>new</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <div class="rating rateit-small"></div>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/04/Elten_74761_neu-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag sale"><span>sale</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <div class="rating rateit-small"></div>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img src="https://voguesafety.com.sg/wp-content/uploads/2018/07/elten_729671-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag hot"><span>hot</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <div class="rating rateit-small"></div>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/08/ELTEN_76651_NEU.jpg" alt="image"></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag hot"><span>hot</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <div class="rating rateit-small"></div>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img src="https://voguesafety.com.sg/wp-content/uploads/2023/01/t-66A7384892E7D27446F342CE476B79EF-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag sale"><span>sale</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Apple Iphone 5s 32GB</a></h3>
+                          <div class="rating rateit-small"></div>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item --> 
+                </div>
+                <!-- /.home-owl-carousel --> 
+              </div>
+              <!-- /.product-slider --> 
+            </div>
+            <!-- /.tab-pane -->
+            
+            <div class="tab-pane" id="apple">
+              <div class="product-slider">
+                <div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_72151_neu-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag sale"><span>sale</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <div class="rating rateit-small"></div>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_767541_neu-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag hot"><span>hot</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <div class="rating rateit-small"></div>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_767541_neu-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag sale"><span>sale</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <div class="rating rateit-small"></div>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="https://voguesafety.com.sg/wp-content/uploads/2018/05/ELTEN_763341_NEU-300x300.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag new"><span>new</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <div class="rating rateit-small"></div>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p13.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag new"><span>new</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <div class="rating rateit-small"></div>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p14.jpg" alt=""></a> </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag hot"><span>hot</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="detail.html">Samsung Galaxy S4</a></h3>
+                          <div class="rating rateit-small"></div>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                              <li class="add-cart-button btn-group">
+                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                              </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <!-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li> -->
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item --> 
+                </div>
+                <!-- /.home-owl-carousel --> 
+              </div>
+              <!-- /.product-slider --> 
+            </div>
+            <!-- /.tab-pane --> 
+            
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 px-4">
+        <div class="text-uppercase p-2" style="background-size:cover;background-repeat:no-repeat;background-image:url('frontend/assets/img/home-banner1.1.png');width:100%;min-height:120px;height:auto;display:flex;align-items:center;color:#fff;">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>  
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <h4>Browse Best Rated Items</h4>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <img 
+              src="{!! asset('frontend/assets/img/btn-addtocart.png') !!}"
+              srcset="
+                  {{ asset('frontend/assets/img/btn-addtocart.png') }} 320w,
+                  {{ asset('frontend/assets/img/btn-addtocart.png') }} 480w,
+                  {{ asset('frontend/assets/img/btn-addtocart.png') }} 800w,
+                  {{ asset('frontend/assets/img/btn-addtocart.png') }} 1200w
+              "
+              style="object-fit:contain;width:35px;"
+              alt="vogue-safety-shoes"
+              loading="lazy"
+            >
+          </div>
+        </div>
+        <div class="text-uppercase p-2" style="background-size:cover;background-repeat:no-repeat;background-image:url('frontend/assets/img/home-banner1.2.png');width:100%;min-height:120px;height:auto;display:flex;align-items:center;color:#fff;">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>  
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <h4>discover best selling items</h4>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <img 
+              src="{!! asset('frontend/assets/img/btn-addtocart.png') !!}"
+              srcset="
+                  {{ asset('frontend/assets/img/btn-addtocart.png') }} 320w,
+                  {{ asset('frontend/assets/img/btn-addtocart.png') }} 480w,
+                  {{ asset('frontend/assets/img/btn-addtocart.png') }} 800w,
+                  {{ asset('frontend/assets/img/btn-addtocart.png') }} 1200w
+              "
+              style="object-fit:contain;width:35px;"
+              alt="vogue-safety-shoes"
+              loading="lazy"
+            >
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-3">
+  <div class="text-center py-2">  
+    <h1><b>Prodoct Lines</b></h1>
+  </div>
+  <div class="w-100 d-flex flex-wrap" style="max-width:1600px;justify-content:center;gap:10px;margin: 0 auto;">
+    <div style="flex: 0 0 255px; height: 270px; background-size: contain ; background-position: top center; background-repeat: no-repeat; background-image: url('frontend/assets/img/home-product-frame.png');padding:25px 10px;">
+      <a href="#" class="p-5"> 
+        <img src="{!! asset('frontend/assets/img/Elten_769551_neu-300x300.jpg') !!}" alt="" class="p-2" style="height:55%;object-fit:contain;"/> 
+      </a> 
+      <div class="px-5">
+        <hr class="p-2" style="color:black;">
+        <h3 class="pt-3 pb-3 price text-uppercase"><a href="#"><b>Biomex Dynamics</b></a></h3>
+        <div class="product-price" style="display: flex; justify-content: space-between; align-items: center;"> 
+          <span style="flex-grow: 1;"> 5 Products</span> 
+          <img 
+            src="{!! asset('frontend/assets/img/btn-addtocart.png') !!}"
+            srcset="
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 320w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 480w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 800w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 1200w
+            "
+            style="margin-top: -5%; padding-right: 0px; width: 35px; object-fit: contain;"
+            alt="vogue-safety-shoes"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
-</div>
-
-<div class="container-fluid">
-  <img src="assets/images/banners/banner2.png" style="width:100%;object-fit:fill;margin-bottom:15px;border-radius:5px;">
+    <div style="flex: 0 0 255px; height: 270px; background-size: contain ; background-position: top center; background-repeat: no-repeat; background-image: url('frontend/assets/img/home-product-frame.png');padding:25px 10px;">
+      <a href="#" class="p-5"> 
+        <img src="{!! asset('frontend/assets/img/Elten_769551_neu-300x300.jpg') !!}" alt="" class="p-2" style="height:55%;object-fit:contain;"/> 
+      </a> 
+      <div class="px-5">
+        <hr class="p-2" style="color:black;">
+        <h3 class="pt-3 pb-3 price text-uppercase"><a href="#"><b>Biomex Dynamics</b></a></h3>
+        <div class="product-price" style="display: flex; justify-content: space-between; align-items: center;"> 
+          <span style="flex-grow: 1;"> 5 Products</span> 
+          <img 
+            src="{!! asset('frontend/assets/img/btn-addtocart.png') !!}"
+            srcset="
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 320w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 480w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 800w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 1200w
+            "
+            style="margin-top: -5%; padding-right: 0px; width: 35px; object-fit: contain;"
+            alt="vogue-safety-shoes"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+    <div style="flex: 0 0 255px; height: 270px; background-size: contain ; background-position: top center; background-repeat: no-repeat; background-image: url('frontend/assets/img/home-product-frame.png');padding:25px 10px;">
+      <a href="#" class="p-5"> 
+        <img src="{!! asset('frontend/assets/img/Elten_769551_neu-300x300.jpg') !!}" alt="" class="p-2" style="height:55%;object-fit:contain;"/> 
+      </a> 
+      <div class="px-5">
+        <hr class="p-2" style="color:black;">
+        <h3 class="pt-3 pb-3 price text-uppercase"><a href="#"><b>Biomex Dynamics</b></a></h3>
+        <div class="product-price" style="display: flex; justify-content: space-between; align-items: center;"> 
+          <span style="flex-grow: 1;"> 5 Products</span> 
+          <img 
+            src="{!! asset('frontend/assets/img/btn-addtocart.png') !!}"
+            srcset="
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 320w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 480w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 800w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 1200w
+            "
+            style="margin-top: -5%; padding-right: 0px; width: 35px; object-fit: contain;"
+            alt="vogue-safety-shoes"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+    <div style="flex: 0 0 255px; height: 270px; background-size: contain ; background-position: top center; background-repeat: no-repeat; background-image: url('frontend/assets/img/home-product-frame.png');padding:25px 10px;">
+      <a href="#" class="p-5"> 
+        <img src="{!! asset('frontend/assets/img/Elten_769551_neu-300x300.jpg') !!}" alt="" class="p-2" style="height:55%;object-fit:contain;"/> 
+      </a> 
+      <div class="px-5">
+        <hr class="p-2" style="color:black;">
+        <h3 class="pt-3 pb-3 price text-uppercase"><a href="#"><b>Biomex Dynamics</b></a></h3>
+        <div class="product-price" style="display: flex; justify-content: space-between; align-items: center;"> 
+          <span style="flex-grow: 1;"> 5 Products</span> 
+          <img 
+            src="{!! asset('frontend/assets/img/btn-addtocart.png') !!}"
+            srcset="
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 320w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 480w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 800w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 1200w
+            "
+            style="margin-top: -5%; padding-right: 0px; width: 35px; object-fit: contain;"
+            alt="vogue-safety-shoes"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+    <div style="flex: 0 0 255px; height: 270px; background-size: contain ; background-position: top center; background-repeat: no-repeat; background-image: url('frontend/assets/img/home-product-frame.png');padding:25px 10px;">
+      <a href="#" class="p-5"> 
+        <img src="{!! asset('frontend/assets/img/Elten_769551_neu-300x300.jpg') !!}" alt="" class="p-2" style="height:55%;object-fit:contain;"/> 
+      </a> 
+      <div class="px-5">
+        <hr class="p-2" style="color:black;">
+        <h3 class="pt-3 pb-3 price text-uppercase"><a href="#"><b>Biomex Dynamics</b></a></h3>
+        <div class="product-price" style="display: flex; justify-content: space-between; align-items: center;"> 
+          <span style="flex-grow: 1;"> 5 Products</span> 
+          <img 
+            src="{!! asset('frontend/assets/img/btn-addtocart.png') !!}"
+            srcset="
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 320w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 480w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 800w,
+                {{ asset('frontend/assets/img/btn-addtocart.png') }} 1200w
+            "
+            style="margin-top: -5%; padding-right: 0px; width: 35px; object-fit: contain;"
+            alt="vogue-safety-shoes"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="container-fluid py-5">
   <div class="py-md-5 text-center">  
     <h1><b>Latest Form Blog</b></h1>
-    <h3>ckjdscnvdsklc</h3>
+    <!-- <h3></h3> -->
   </div>
-  <section class="section latest-blog outer-bottom-vs wow fadeInUp" style="border-radius:15px;">
+  <section class="section latest-blog outer-bottom-vs wow" style="border-radius:15px;">
       <div class="blog-slider-container outer-top-xs">
         <div class="owl-carousel blog-slider custom-carousel">
           <div class="item">
@@ -1840,7 +2094,7 @@ Home Easy Online Shop
 </div>
 
 <div class="container-fluid" >
-  <section class="section wow fadeInUp" style="padding: 20px 20px;">
+  <section class="section wow" style="padding: 20px 20px;">
     <div class="row" style="height:100%;max-height:650px;background-color:black;border-radius: 15px !important;">
       <div class='col-md-6 col-xs-12' border:1px solid red;>
         <div class="video-container">
@@ -1882,9 +2136,7 @@ Home Easy Online Shop
     <h1><b>What People Say About Us</b></h1>
     <h4>TESTIMONIALS</h4>
   </div>
-  <section class="section wow fadeInUp new-arriavls" style="border-radius:15px;">
-    <div class="sidebar-widget  wow fadeInUp" style="border-radius:15px;">
-      <div id="advertisement" class="advertisement">
+  <div id="advertisement" class="advertisement">
         <div class="item">
           <div class="avatar"><img src="assets/images/testimonials/member1.png" alt="Image"></div>
           <div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
@@ -1909,9 +2161,5 @@ Home Easy Online Shop
         <!-- /.item --> 
         
       </div>
-      <!-- /.owl-carousel --> 
-    </div>  
-    <!-- /.home-owl-carousel --> 
-  </section>
 </div>
 @endsection

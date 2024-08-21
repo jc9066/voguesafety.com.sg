@@ -110,7 +110,7 @@
 
           <!-- ===== === SHOPPING CART DROPDOWN ===== == -->
           
-          <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
+          <div hidden class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
             <div class="items-cart-inner">
               <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
     <div class="basket-item-count"><span class="count" id="cartQty"> </span></div>
@@ -160,14 +160,16 @@
     <div class="container-fluid">
       <div class="yamm navbar navbar-default" role="navigation">
         <div class="navbar-header">
-       <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> 
-       <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <button id="navicollapsechck" data-target="#mc-horizontal-menu-collapse" class="navbar-toggle collapsed" type="button"> 
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
+      </button>
         </div>
-        <div class="nav-bg-class">
+        <div class="nav-bg-class pb-3">
           <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
             <div class="nav-outer">
               <ul class="nav navbar-nav">
-  <li class="active dropdown yamm-fw"> <a href="{{ url('/') }}" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">
+  <li class="{{ Request::routeIs('home.page') ? 'active' : '' }} dropdown yamm-fw"> 
+    <a href="/">
 @if(session()->get('language') == 'hindi') घर @else Home @endif
   </a> </li>
 
@@ -178,7 +180,8 @@
 
 
  @foreach($categories as $category)
-  <li class="dropdown yamm mega-menu"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">
+  <li class="dropdown yamm mega-menu"> 
+    <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">
     @if(session()->get('language') == 'hindi') {{ $category->category_name_hin }} @else {{ $category->category_name_en }} @endif
     </a>
     <ul class="dropdown-menu container">
@@ -227,9 +230,10 @@
     </ul>
   </li>
   @endforeach <!-- // End Category Foreach -->
-
-
-     <li> <a href="{{ route('shop.page') }}">Shop</a> </li>
+     <li class="{{ Request::routeIs('about.page') ? 'active' : '' }}"> <a href="{{ route('about.page') }}">About Us</a> </li>
+     <li class="{{ Request::routeIs('safety.page') ? 'active' : '' }}"> <a href="{{ route('safety.page') }}">WHY Vogue Safety ?</a></li>
+     <li class="{{ Request::routeIs('technologies.page') ? 'active' : '' }}"> <a href="{{ route('technologies.page') }}">Technologies</a></li>
+     <li class="{{ Request::routeIs('store.page') ? 'active' : '' }}"> <a href="{{ route('store.page') }}">Our Store</a> </li>
                
                 <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a> </li>
 

@@ -1,8 +1,38 @@
-<footer id="footer" class="footer color-bg">
+<footer id="footer" class="footer" style="background-color:#030708 !important;color:white !important;">
   <div class="footer-bottom">
-    <div class="container-fluid">
+    <div class="container-fluid mx-5 px-5">
       <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+            <div class="module-heading">
+              <h4 class="module-title">Contact Us</h4>
+            </div>
+            <div class="module-body">
+              <ul class='list-unstyled'>
+                <li class="first"><a href="#" title="Contact us">+65 97318964</a></li>
+                <li><a href="#" title="About us">sales@voguesafety.com.sg</a></li>
+                <li><a href="#" title="faq">Tagore Lane</a></li>
+              </ul>
+            </div>
+            <br/>
+            <div class="module-heading">
+              <h4 class="module-title">Follow Us</h4>
+            </div>
+            <div class="clearfix payment-methods">
+              <ul>
+                <li><img src="assets/images/payments/1.png" alt=""></li>
+                <li><img src="assets/images/payments/3.png" alt=""></li>
+                <li><img src="assets/images/payments/4.png" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"></div>
+      </div>
+
+      <div hidden class="row">
+        <div class="col-xs-6 col-sm-6 col-md-3">
           <div class="module-heading">
             <h4 class="module-title">Contact Us</h4>
           </div>
@@ -15,7 +45,7 @@
         </div>
         <!-- /.col -->
         
-        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="col-xs-6 col-sm-6 col-md-3">
           <div class="module-heading">
             <h4 class="module-title">Customer Service</h4>
           </div>
@@ -34,7 +64,7 @@
         </div>
         <!-- /.col -->
         
-        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="col-xs-6 col-sm-6 col-md-3">
           <div class="module-heading">
             <h4 class="module-title">Corporation</h4>
           </div>
@@ -53,7 +83,7 @@
         </div>
         <!-- /.col -->
         
-        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="col-xs-6 col-sm-6 col-md-3">
           <div class="module-heading">
             <h4 class="module-title">Why Choose Us</h4>
           </div>
@@ -73,29 +103,7 @@
       </div>
     </div>
   </div>
-  <div class="copyright-bar">
-    <div class="container-fluid">
-      <div class="col-xs-12 col-sm-6 no-padding social">
-        <ul class="link">
-          <li class="fb pull-left"><a target="_blank" rel="nofollow" href="#" title="Facebook"></a></li>
-          <!-- <li class="tw pull-left"><a target="_blank" rel="nofollow" href="#" title="Twitter"></a></li> -->
-          <li class="googleplus pull-left"><a target="_blank" rel="nofollow" href="#" title="GooglePlus"></a></li>
-          <li class="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li>
-          <!-- <li class="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a></li> -->
-          <li class="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li>
-          <li class="youtube pull-left"><a target="_blank" rel="nofollow" href="#" title="Youtube"></a></li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-6 no-padding">
-        <div class="clearfix payment-methods">
-          <ul>
-            <li><img src="assets/images/payments/1.png" alt=""></li>
-            <li><img src="assets/images/payments/3.png" alt=""></li>
-            <li><img src="assets/images/payments/4.png" alt=""></li>
-          </ul>
-        </div>
-        <!-- /.payment-methods --> 
-      </div>
-    </div>
+  <div class="copyright-bar text-center p-3" style="background-color:#0A1517;color:white;line-height:inherit;">
+    <small>VOGUE SAFETY INTERNATIONAL PTE LTD &copy; COPYRIGHT 2025 <br/></small>
   </div>
 </footer>

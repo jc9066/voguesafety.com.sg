@@ -658,7 +658,11 @@ img[src="assets/images/blank.gif"] {
   margin-top: 5px !important;
 }
 a {
-  color: #12cca7;
+  color: #03070B;
+}
+
+a:hover {
+  color: #00E525;
 }
 .show-theme-options:hover,
 .show-theme-options:focus {
@@ -1912,6 +1916,14 @@ header{background:#030708}
   z-index: 100;
   display: table-cell;
 }
+.big-text {
+  font-size: 42px;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-family: 'Open Sans', sans-serif;
+  color: #00E525;
+  text-shadow: 1px 1px 3px #00E525;
+}
 .sidebar .sidebar-widget .advertisement .item .caption .big-text {
   font-size: 60px;
   line-height: 125px;
@@ -2763,7 +2775,8 @@ age-container #owl-main .owl-next {
 .product .cart .action ul li.add-cart-button .btn.btn-primary.icon {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  background: #fdd922 ;
+  background: #00E525 ;
+  color: white;
 }
 .product .cart .action ul li.lnk {
   margin: 10px 0px;
@@ -2779,7 +2792,7 @@ age-container #owl-main .owl-next {
   padding: 8px 10px;
 }
 .product .cart .action ul li.lnk.wishlist {
-	background:#0f6cb2;
+	background:red;
 	margin:0px;
 	border-radius:0px
 	

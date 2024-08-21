@@ -7,13 +7,17 @@
 <!-- Meta -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
 <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
+<meta name="robots" content="all">
 
 <title>@yield('title') </title>
 
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendor_components/bootstrap/dist/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendor_components/bootstrap/dist/css/bootstrap-min.css') }}">
 
 <!-- Customizable CSS -->
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/main.css') }}">
@@ -34,12 +38,25 @@
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 
+<script src="https://js.stripe.com/v3/"></script>
 </head>
 <body class="cnt-home">
+<!-- ============================================== HEADER ============================================== -->
 @include('frontend.body.header')
-@yield('content')
-@include('frontend.body.footer')
 
+<!-- ============================================== HEADER : END ============================================== -->
+@yield('content')
+<!-- /#top-banner-and-menu --> 
+
+<!-- ============================================================= FOOTER ============================================================= -->
+@include('frontend.body.footer')
+<!-- ============================================================= FOOTER : END============================================================= --> 
+
+<!-- For demo purposes – can be removed on production --> 
+
+<!-- For demo purposes – can be removed on production : End --> 
+
+<!-- JavaScripts placed at the end of the document so the pages load faster --> 
 <script src="{{ asset('frontend/assets/js/jquery-1.11.1.min.js') }}"></script> 
 <script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script> 
 <script src="{{ asset('frontend/assets/js/bootstrap-hover-dropdown.min.js') }}"></script> 
@@ -852,6 +869,7 @@ function addToWishList(product_id){
 
 
 
+
 <script>
 $(document).ready(function() {
     $('body')
@@ -859,15 +877,6 @@ $(document).ready(function() {
         var faqId = $(this).attr('for');
         $('.faqAnswer.'+faqId).toggle();
 
-    })
-    .on("click","#navicollapsechck", function(e){
-        console.log($(this).attr('data-target'));
-        var Id = $(this).attr('data-target').substr(1);
-        console.log(Id);
-        //setTimeout(function() {
-            $('#'+Id).toggleClass('collapse').toggleClass('in');
-        //}, 1000);
-        
     })
 })
 

@@ -155,6 +155,8 @@ jQuery('.home-owl-carousel').each(function(){
     }
     owl.owlCarousel({
         items : itemPerLine,
+        itemsMobile:[400,1],
+        itemsTabletSmall:[500,2],
         itemsTablet:[768,2],
         navigation : true,
         pagination : false,
@@ -172,6 +174,8 @@ jQuery('.homepage-owl-carousel').each(function(){
     }
     owl.owlCarousel({
         items : itemPerLine,
+        itemsMobile:[400,1],
+        itemsTabletSmall:[500,2],
         itemsTablet:[768,2],
         itemsDesktop : [1199,2],
         navigation : true,
@@ -182,7 +186,7 @@ jQuery('.homepage-owl-carousel').each(function(){
 });
 
 jQuery(".blog-slider").owlCarousel({
-    items : 2,
+    items : 3,
     itemsDesktopSmall :[979,2],
     itemsDesktop : [1199,2],
     navigation : true,
@@ -192,10 +196,13 @@ jQuery(".blog-slider").owlCarousel({
 });
 
 jQuery(".best-seller").owlCarousel({
-    items : 3,
+    items : 4,
     navigation : true,
-    itemsDesktopSmall :[979,2],
-    itemsDesktop : [1199,2],
+    itemsMobile:[400,1],
+    itemsTabletSmall:[500,2],
+    itemsTablet:[768,3],
+    itemsDesktopSmall :[979,3],
+    itemsDesktop : [1199,4],
     slideSpeed : 300,
     pagination: false,
     paginationSpeed : 400,
@@ -218,9 +225,9 @@ jQuery(".brand-slider").owlCarousel({
     items : 6,
     navigation : true,
     slideSpeed : 300,
-    pagination: false,
+    pagination: true,
     paginationSpeed : 400,
-    navigationText: ["", ""]
+    navigationText: ["<i class='icon fa fa-angle-left'></i>", "<i class='icon fa fa-angle-right'></i>"]
 });    
 jQuery("#advertisement").owlCarousel({
     items : 1,

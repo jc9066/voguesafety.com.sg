@@ -3,9 +3,6 @@
 /*  Colors CSS
 /*===================================================================================*/
 
-a {
-  color: white;
-}
 .show-theme-options:hover,
 .show-theme-options:focus {
   background: white;
@@ -72,6 +69,9 @@ a {
 }
 .cnt-home .header-style-1.header-style-3 .header-nav .navbar .navbar-nav > li.active {
   background: white;
+}
+.navbar-default .navbar-toggle{
+  background-color: black;
 }
 .header-style-2 .header-nav .navbar-default .navbar-collapse .navbar-nav > li > a:hover,
 .header-style-2 .header-nav .navbar-default .navbar-collapse .navbar-nav > li > a:focus {
