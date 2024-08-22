@@ -4,6 +4,6 @@
 Vogue Safety
 @endsection
 <div class="container-fluid">
-  working ... 
+
 </div>
 @endsection

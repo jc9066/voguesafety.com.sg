@@ -86,6 +86,7 @@ body {
   font-size: 13px;
   color: #333;
   overflow-x: hidden;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
@@ -94,6 +95,8 @@ body {
 
 .cnt-home {
   /* background-color: #f3f3f3; */
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 ul {
