@@ -4,7 +4,7 @@
 Vogue Safety
 @endsection
 <div id="hero">
-  <div class="image" style="height:650px;"> 
+  <div class="image" style="height:500px;"> 
     <img 
       src="{!! asset('frontend/assets/img/home-hero.png') !!}"
       srcset="
@@ -14,11 +14,11 @@ Vogue Safety
           {{ asset('frontend/assets/img/home-hero.png') }} 1200w
       "
       sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 800px) 800px, 100vw"
-      style="z-index:1;width:100%;height:100%;object-fit:cover;"
+      style="z-index:1;width:100%;min-height:500px;height:100%;max-width:1300px;object-fit:cover;"
       alt="vogue-safety-shoes"
       loading="lazy"
     >
-    <div class="container-fluid" style="z-index:2;margin-top:-500px;">
+    <div class="container-fluid" style="z-index:2;margin-top:-350px;">
       <div class="text-left">
         <h1 class="text-uppercase" style="color:white;">Vogue Safety</h1>
         <h1 class="big-text" style="line-height:inherit;letter-spacing:1px;">Our New Collections </h1>

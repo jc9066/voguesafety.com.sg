@@ -246,7 +246,7 @@ Shop Page
 
 
 
-  <div class="container-fluid position-relative">
+  <div class="position-relative" style="width:100%;">
   <img 
     src="{!! asset('frontend/assets/img/home-banner2.0.png') !!}"
     srcset="
@@ -256,7 +256,7 @@ Shop Page
         {{ asset('frontend/assets/img/home-banner2.0.png') }} 1200w
     "
     sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 800px) 800px, 100vw"
-    style="width: 100%; height:100%;object-fit:cover; z-index: 1;"
+    style="width: 100%; height:100%;object-fit:cover;z-index: 1;min-height:350px;"
     alt="vogue-safety-shoes"
     loading="lazy"
   >
