@@ -35,7 +35,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 
 </head>
-<body class="cnt-home">
+<body class="cnt-home" style="max-width:100%;overflow-x:hidden !important;">
 <style>
     .line-with-text {
         display: flex;

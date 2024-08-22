@@ -171,12 +171,6 @@ class CartController extends Controller
 
  // Checkout Method 
     public function CheckoutCreate(){
-        $carts = [];//Cart::content();
-        $cartQty = 1;
-        $cartTotal = 100;
-        $divisions = [];
-        return view('frontend.checkout.checkout_view',compact('carts','cartQty','cartTotal','divisions'));
-
         if (Auth::check()) {
             if (Cart::total() > 0) {
 
