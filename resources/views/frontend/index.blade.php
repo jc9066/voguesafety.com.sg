@@ -693,7 +693,7 @@ Vogue Safety
     </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid position-relative">
   <img 
     src="{!! asset('frontend/assets/img/home-banner2.0.png') !!}"
     srcset="
@@ -716,10 +716,18 @@ Vogue Safety
         {{ asset('frontend/assets/img/home-banner-text2.0.png') }} 1200w
     "
     sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 800px) 800px, 100vw"
-    style="width:40%;object-fit: contain; z-index: 2; margin-top: -50%; margin-left:50px;"
+    style="width:40%;object-fit: contain; z-index: 2; margin-top: -50%; margin-left:20px;"
     alt="vogue-safety-shoes-2"
     loading="lazy"
   >
+  <div class="d-none d-md-block d-sm-block d-xs-block" style="width:100%; z-index:2; position: absolute; margin-top:-17%; margin-left:3%;">
+    <h3 class="row" style="gap:10px;">
+      <span id="days" class="btn p-3 m-2 d-flex align-items-center justify-content-center" style="min-width:70px; min-height:70px;width:7%; height:2%; border-radius:50%; background-color:white;"></span>
+      <span id="hours" class="btn p-3 m-2 d-flex align-items-center justify-content-center" style="min-width:70px; min-height:70px;width:7%; height:2%; border-radius:50%; background-color:white;"></span>
+      <span id="minutes" class="btn p-3 m-2 d-flex align-items-center justify-content-center" style="min-width:70px; min-height:70px;width:7%; height:2%; border-radius:50%; background-color:white;"></span>
+      <span id="seconds" class="btn p-3 m-2 d-flex align-items-center justify-content-center" style="min-width:70px; min-height:70px;width:7%; height:2%; border-radius:50%; background-color:white;"></span>
+    </h3>
+  </div>
 </div>
 
 <div class='container-fluid pt-3'>
@@ -2093,36 +2101,36 @@ Vogue Safety
   </section>
 </div>
 
-<div class="container-fluid" >
-  <section class="section wow" style="padding: 20px 20px;">
-    <div class="row" style="height:100%;max-height:650px;background-color:black;border-radius: 15px !important;">
-      <div class='col-md-6 col-xs-12' border:1px solid red;>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/5X0SdLifKug" frameborder="0" allowfullscreen></iframe>
+<div class="container-fluid">
+  <section class="section wow" style="padding: 20px 20px; overflow-y:auto;">
+    <div class="row" style="height:auto;background-color:black;border-radius: 15px !important; overflow: hidden;">
+      <div class="col-md-6 col-sm-12 col-xs-12" style="padding: 0;">
+        <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-height: 100%;">
+          <iframe src="https://www.youtube.com/embed/5X0SdLifKug" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
         </div>
       </div>
-      <div class='col-md-6 col-xs-12'>
-        <div class="row">
-          <div class='col-md-6 col-xs-12'>
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/VGlB5bSDPTQ" frameborder="0" allowfullscreen></iframe>
+      <div class="col-md-6 col-xs-12" style="padding: 0;">
+        <div class="row" style="height: 50%;">
+          <div class="col-md-6 col-sm-12 col-xs-12" style="padding: 0;">
+            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-height: 100%;">
+              <iframe src="https://www.youtube.com/embed/VGlB5bSDPTQ" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
             </div>
           </div>
-          <div class='col-md-6 col-xs-12'>
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/lg5CgJqql5U" frameborder="0" allowfullscreen></iframe>
+          <div class="col-md-6 col-sm-12 col-xs-12" style="padding: 0;">
+            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-height: 100%;">
+              <iframe src="https://www.youtube.com/embed/lg5CgJqql5U" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class='col-md-6 col-xs-12'>
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/X0-Ls20wfik" frameborder="0" allowfullscreen></iframe>
+        <div class="row" style="height: 50%;">
+          <div class="col-md-6 col-sm-12 col-xs-12" style="padding: 0;">
+            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-height: 100%;">
+              <iframe src="https://www.youtube.com/embed/X0-Ls20wfik" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
             </div>
           </div>
-          <div class='col-md-6 col-xs-12'>
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/binKkJrfO4M" frameborder="0" allowfullscreen></iframe>
+          <div class="col-md-6 col-sm-12 col-xs-12" style="padding: 0;">
+            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-height: 100%;">
+              <iframe src="https://www.youtube.com/embed/binKkJrfO4M" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
             </div>
           </div>
         </div>
@@ -2131,7 +2139,7 @@ Vogue Safety
   </section>
 </div>
 
-<div class="container-fluid py-md-5">
+<div class="container-fluid py-5">
   <div class="py-md-5 text-center">  
     <h1><b>What People Say About Us</b></h1>
     <h4>TESTIMONIALS</h4>

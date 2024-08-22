@@ -20,6 +20,7 @@ class RouteServiceProvider extends ServiceProvider
     public const HOME = '/dashboard'; 
 
     public static function redirectTo($guard){
+        if($guard !="admin") $guard = "";
         return $guard.'/dashboard';
     }
 

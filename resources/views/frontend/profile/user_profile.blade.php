@@ -2,18 +2,15 @@
 @section('content')
 
 <div class="body-content">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
       
 			 @include('frontend.common.user_sidebar')
 
-			<div class="col-md-2">
-				
-			</div> <!-- // end col md 2 -->
 
 
-			<div class="col-md-6">
-  <div class="card">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+  <div class="card" style="width:100%;">
   	<h3 class="text-center"><span class="text-danger">Hi....</span><strong>{{ Auth::user()->name }}</strong> Update Your Profile  </h3>
 
   	<div class="card-body">

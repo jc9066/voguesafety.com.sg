@@ -6,22 +6,22 @@
       <div class="header-top-inner">
         <div class="cnt-account">
           <ul class="list-unstyled">
-            <li><a href="#"><i class="icon fa fa-user"></i>
+            <li hidden><a href="#"><i class="icon fa fa-user"></i>
 @if(session()->get('language') == 'hindi') मेरी प्रोफाइल @else My Account @endif
             </a></li>
-            <li><a href="{{ route('wishlist') }}"><i class="icon fa fa-heart"></i>Wishlist</a></li>
             <li><a href="{{ route('mycart') }}"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
+            <li><a href="{{ route('wishlist') }}"><i class="icon fa fa-heart"></i>Wishlist</a></li>
             <li><a href="{{ route('checkout') }}"><i class="icon fa fa-check"></i>Checkout</a></li>
 
- <li><a href="" type="button" data-toggle="modal" data-target="#ordertraking"><i class="icon fa fa-check"></i>Order Traking</a></li>
+ <li hidden><a href="" type="button" data-toggle="modal" data-target="#ordertraking"><i class="icon fa fa-check"></i>Order Traking</a></li>
 
             <li>
     
 
    @auth
-   <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>User Profile</a>
+   <a href="{{ route('dashboard') }}"><i class="icon fa fa-user"></i>User Profile</a>
    @else
-   <a href="{{ route('login') }}"><i class="icon fa fa-lock"></i>Login/Register</a>
+   <a href="{{ route('dashboard') }}"><i class="icon fa fa-lock"></i>Login/Register</a>
    @endauth
               
 
@@ -32,14 +32,14 @@
         
         <div class="cnt-block">
           <ul class="list-unstyled list-inline">
-            <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">USD </span><b class="caret"></b></a>
+            <li hidden class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">USD </span><b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#">USD</a></li>
                 <li><a href="#">INR</a></li>
                 <li><a href="#">GBP</a></li>
               </ul>
             </li>
- <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">
+ <li hidden class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">
 @if(session()->get('language') == 'hindi') भाषा: हिन्दी @else Language @endif
   </span><b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -157,14 +157,14 @@
   
   <!-- ============================================== NAVBAR ============================================== -->
   <div class="header-nav animate-dropdown">
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
       <div class="yamm navbar navbar-default" role="navigation">
         <div class="navbar-header">
       <button id="navicollapsechck" data-target="#mc-horizontal-menu-collapse" class="navbar-toggle collapsed" type="button"> 
         <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
       </button>
         </div>
-        <div class="nav-bg-class pb-3">
+        <div class="nav-bg-class">
           <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
             <div class="nav-outer">
               <ul class="nav navbar-nav">
@@ -233,11 +233,11 @@
      <li class="{{ Request::routeIs('about.page') ? 'active' : '' }}"> <a href="{{ route('about.page') }}">About Us</a> </li>
      <li class="{{ Request::routeIs('safety.page') ? 'active' : '' }}"> <a href="{{ route('safety.page') }}">WHY Vogue Safety ?</a></li>
      <li class="{{ Request::routeIs('technologies.page') ? 'active' : '' }}"> <a href="{{ route('technologies.page') }}">Technologies</a></li>
+     <li class="{{ Request::routeIs('home.blog') ? 'active' : '' }}"> <a href="{{ route('home.blog') }}">Blog</a> </li>
+
      <li class="{{ Request::routeIs('shop.page') ? 'active' : '' }}"> <a href="{{ route('shop.page') }}">Our Store</a> </li>
                
-                <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a> </li>
-
- <li class="dropdown  navbar-right special-menu"> <a href="{{ route('home.blog') }}">Blog</a> </li>
+                <!-- <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a> </li> -->
 
 
               </ul>

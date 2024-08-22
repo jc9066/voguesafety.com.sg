@@ -7,7 +7,7 @@
 
 
 <div class="breadcrumb">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
 				<li><a href="home.html">Home</a></li>
@@ -18,7 +18,7 @@
 </div><!-- /.breadcrumb -->
 
 <div class="body-content">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="my-wishlist-page">
 			<div class="row">
 				<div class="col-md-12 my-wishlist">
@@ -41,7 +41,6 @@
 
 
 <br>
- @include('frontend.body.brands')
 </div>
 
 

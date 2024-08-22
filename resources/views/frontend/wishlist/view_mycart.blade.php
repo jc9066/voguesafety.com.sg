@@ -7,7 +7,7 @@ My Cart Page
 
 
 <div class="breadcrumb">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
 				<li><a href="home.html">Home</a></li>
@@ -18,9 +18,9 @@ My Cart Page
 </div><!-- /.breadcrumb --> 
 
 <div class="body-content">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row ">
-			<div class="shopping-cart">
+			<div class="shopping-cart" style="width:100%;">
 				<div class="shopping-cart-table ">
 	<div class="table-responsive">
 		<table class="table">
@@ -118,7 +118,7 @@ My Cart Page
 
 
 <br>
- @include('frontend.body.brands')
+
 </div>
 
  

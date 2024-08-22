@@ -9,7 +9,7 @@ Blog Category Page
 
 
 <div class="breadcrumb">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
 				<li><a href="#">Home</a></li>
@@ -20,10 +20,10 @@ Blog Category Page
 </div><!-- /.breadcrumb -->
 
 <div class="body-content">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="blog-page">
-				<div class="col-md-9">
+				<div class="col-md-9 col-sm-12 col-xs-12">
 
 
 
@@ -52,7 +52,7 @@ Blog Category Page
 	<ul class="list-inline list-unstyled">
 		<li class="prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
 		<li><a href="#">1</a></li>	
-		<li class="active"><a href="#">2</a></li>	
+		<li><a href="#">2</a></li>	
 		<li><a href="#">3</a></li>	
 		<li><a href="#">4</a></li>	
 		<li class="next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
@@ -60,7 +60,7 @@ Blog Category Page
 </div><!-- /.pagination-container -->    </div><!-- /.text-right -->
 
 </div><!-- /.filters-container -->				</div>
-				<div class="col-md-3 sidebar">
+				<div class="col-md-3 col-sm-12 col-xs-12 sidebar">
                 
                 
                 
@@ -74,9 +74,6 @@ Blog Category Page
     </form>
 </div>		
 
-<div class="home-banner outer-top-n outer-bottom-xs">
-<img src="{{ asset('frontend/assets/images/banners/LHS-banner.jpg') }} " alt="Image">
-</div>
 				<!-- ======== ====CATEGORY======= === -->
 <div class="sidebar-widget outer-bottom-xs wow fadeInUp">
 	<h3 class="section-title">Blog Category</h3>

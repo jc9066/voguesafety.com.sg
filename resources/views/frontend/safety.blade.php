@@ -278,5 +278,5 @@ Vogue Safety
     </div>
   </div>
 </div>
-
+<br/>
 @endsection

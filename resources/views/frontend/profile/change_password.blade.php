@@ -5,17 +5,14 @@ $user = DB::table('users')->where('id',Auth::user()->id)->first();
 @endphp -->
 
 <div class="body-content">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
       
 		 @include('frontend.common.user_sidebar')
  
-			<div class="col-md-2">
-				
-			</div> <!-- // end col md 2 -->
 
 
-			<div class="col-md-6">
+			<div class="col-md-9 col-sm-12 col-xs-12">
   <div class="card">
   	<h3 class="text-center"><span class="text-danger">Change Password</span><strong> </strong>   </h3>
 

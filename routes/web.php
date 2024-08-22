@@ -38,7 +38,7 @@ use App\Http\Controllers\Frontend\ShopController;
 Route::get('/', function () { return view('frontend.index');})->name('home.page');
 Route::get('/safety-class', function () { return view('frontend.safety');})->name('safety.page');
 Route::get('/about-us', function () { return view('frontend.about');})->name('about.page');
-Route::get('/technologies', function () { return view('frontend.index');})->name('technologies.page');
+Route::get('/technologies', function () { return view('frontend.technologies');})->name('technologies.page');
 Route::get('/user/logout', [IndexController::class, 'UserLogout'])->name('user.logout'); //-OK
 Route::get('/user/profile', [IndexController::class, 'UserProfile'])->name('user.profile'); //-OK
 Route::post('/user/profile/store', [IndexController::class, 'UserProfileStore'])->name('user.profile.store');
@@ -351,7 +351,7 @@ Route::get('/district-get/ajax/{division_id}', [CheckoutController::class, 'Dist
 
 Route::get('/state-get/ajax/{district_id}', [CheckoutController::class, 'StateGetAjax']);
 
-Route::post('/checkout/store', [CheckoutController::class, 'CheckoutStore'])->name('checkout.store');
+Route::get('/checkout/store', [CheckoutController::class, 'CheckoutStore'])->name('checkout.store');
 
 
 

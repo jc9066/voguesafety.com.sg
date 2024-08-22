@@ -8,7 +8,7 @@ My Checkout
 
 
 <div class="breadcrumb">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
 				<li><a href="home.html">Home</a></li>
@@ -22,7 +22,7 @@ My Checkout
 
 
 <div class="body-content">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="checkout-box ">
 			<div class="row">
 				<div class="col-md-8">

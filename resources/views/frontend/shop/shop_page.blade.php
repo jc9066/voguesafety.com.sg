@@ -9,10 +9,11 @@ Shop Page
 
 
 <div class="breadcrumb">
-  <div class="container">
+  <div class="container-fluid">
     <div class="breadcrumb-inner">
       <ul class="list-inline list-unstyled">
-        <li><a href="#">Store</a></li>
+        <li><a href="#">Home</a></li>
+				<li class='active'>Store</li>
          
       </ul>
     </div>
@@ -235,8 +236,7 @@ Shop Page
 
 
         
-        <div class="home-banner"> <img src="{{ asset('frontend/assets/images/banners/LHS-banner.jpg') }}" alt="Image"> </div>
-      </div>
+        </div>
       <!-- /.sidebar-filter --> 
     </div>
     <!-- /.sidebar-module-container --> 
@@ -246,28 +246,43 @@ Shop Page
 
 
 
-  <div id="hero" style="position:relative;min-height:250px;padding:100px 10px;">
-      <img 
-        src="{!! asset('frontend/assets/img/safety-hero.png') !!}"
-        srcset="
-            {{ asset('frontend/assets/img/safety-hero.png') }} 320w,
-            {{ asset('frontend/assets/img/safety-hero.png') }} 480w,
-            {{ asset('frontend/assets/img/safety-hero.png') }} 800w,
-            {{ asset('frontend/assets/img/safety-hero.png') }} 1200w
-        "
-        sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 800px) 800px, 100vw"
-        style="z-index:1;width:100%;height: calc(100% - 80px);min-height:250px;object-fit:cover;position: absolute;top:0;left:0;"
-        alt="vogue-safety-shoes"
-        loading="lazy"
-      >
-      <div class="container-fluid" style="position: relative; z-index: 2; padding-top: 20px;">
-        <div class="text-center">
-          <h1 class="text-uppercase" style="color:white;">Vogue Safety</h1>
-          <h1 class="big-text" style="line-height:inherit;">WHY WE MANUFACTURE SHOES</h1>
-        </div>
-      </div>
-      <br/>
+  <div class="container-fluid position-relative">
+  <img 
+    src="{!! asset('frontend/assets/img/home-banner2.0.png') !!}"
+    srcset="
+        {{ asset('frontend/assets/img/home-banner2.0.png') }} 320w,
+        {{ asset('frontend/assets/img/home-banner2.0.png') }} 480w,
+        {{ asset('frontend/assets/img/home-banner2.0.png') }} 800w,
+        {{ asset('frontend/assets/img/home-banner2.0.png') }} 1200w
+    "
+    sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 800px) 800px, 100vw"
+    style="width: 100%; height:100%;object-fit:cover; z-index: 1;"
+    alt="vogue-safety-shoes"
+    loading="lazy"
+  >
+  <img 
+    src="{!! asset('frontend/assets/img/home-banner-text2.0.png') !!}"
+    srcset="
+        {{ asset('frontend/assets/img/home-banner-text2.0.png') }} 320w,
+        {{ asset('frontend/assets/img/home-banner-text2.0.png') }} 480w,
+        {{ asset('frontend/assets/img/home-banner-text2.0.png') }} 800w,
+        {{ asset('frontend/assets/img/home-banner-text2.0.png') }} 1200w
+    "
+    sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 800px) 800px, 100vw"
+    style="width:40%;object-fit: contain; z-index: 2; margin-top: -50%; margin-left:20px;"
+    alt="vogue-safety-shoes-2"
+    loading="lazy"
+  >
+  <div class="d-none d-md-block d-sm-block d-xs-block" style="width:100%; z-index:2; position: absolute; margin-top:-17%; margin-left:3%;">
+    <h3 class="row" style="gap:10px;">
+      <span id="days" class="btn p-3 m-2 d-flex align-items-center justify-content-center" style="min-width:70px; min-height:70px;width:7%; height:2%; border-radius:50%; background-color:white;"></span>
+      <span id="hours" class="btn p-3 m-2 d-flex align-items-center justify-content-center" style="min-width:70px; min-height:70px;width:7%; height:2%; border-radius:50%; background-color:white;"></span>
+      <span id="minutes" class="btn p-3 m-2 d-flex align-items-center justify-content-center" style="min-width:70px; min-height:70px;width:7%; height:2%; border-radius:50%; background-color:white;"></span>
+      <span id="seconds" class="btn p-3 m-2 d-flex align-items-center justify-content-center" style="min-width:70px; min-height:70px;width:7%; height:2%; border-radius:50%; background-color:white;"></span>
+    </h3>
   </div>
+</div>
+
 
 
 
@@ -557,48 +572,6 @@ Shop Page
   <!-- /.col --> 
 </div>
 <!-- /.row --> 
-<!-- ============================================== BRANDS CAROUSEL ============================================== -->
-<div id="brands-carousel" class="logo-slider wow fadeInUp">
-  <div class="logo-slider-inner">
-    <div id="brand-slider" class="owl-carousel brand-slider custom-carousel owl-theme">
-      <div class="item m-t-15"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand1.png" src="assets/images/blank.gif" alt=""> </a> </div>
-      <!--/.item-->
-      
-      <div class="item m-t-10"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand2.png" src="assets/images/blank.gif" alt=""> </a> </div>
-      <!--/.item-->
-      
-      <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand3.png" src="assets/images/blank.gif" alt=""> </a> </div>
-      <!--/.item-->
-      
-      <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand4.png" src="assets/images/blank.gif" alt=""> </a> </div>
-      <!--/.item-->
-      
-      <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand5.png" src="assets/images/blank.gif" alt=""> </a> </div>
-      <!--/.item-->
-      
-      <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand6.png" src="assets/images/blank.gif" alt=""> </a> </div>
-      <!--/.item-->
-      
-      <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand2.png" src="assets/images/blank.gif" alt=""> </a> </div>
-      <!--/.item-->
-      
-      <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand4.png" src="assets/images/blank.gif" alt=""> </a> </div>
-      <!--/.item-->
-      
-      <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand1.png" src="assets/images/blank.gif" alt=""> </a> </div>
-      <!--/.item-->
-      
-      <div class="item"> <a href="#" class="image"> <img data-echo="assets/images/brands/brand5.png" src="assets/images/blank.gif" alt=""> </a> </div>
-      <!--/.item--> 
-    </div>
-    <!-- /.owl-carousel #logo-slider --> 
-  </div>
-  <!-- /.logo-slider-inner --> 
-  
-</div>
-<!-- /.logo-slider --> 
-<!-- ============================================== BRANDS CAROUSEL : END ============================================== --> 
-
 
 </form>
 

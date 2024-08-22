@@ -36,6 +36,29 @@
 
 </head>
 <body class="cnt-home">
+<style>
+    .line-with-text {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .line-with-text::before,
+    .line-with-text::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .line-with-text::before {
+        margin-right: 10px;
+    }
+
+    .line-with-text::after {
+        margin-left: 10px;
+    }
+</style>
 @include('frontend.body.header')
 @yield('content')
 @include('frontend.body.footer')
@@ -52,7 +75,7 @@
 <script src="{{ asset('frontend/assets/js/bootstrap-select.min.js') }}"></script> 
 <script src="{{ asset('frontend/assets/js/wow.min.js') }}"></script> 
 <script src="{{ asset('frontend/assets/js/scripts.js') }}"></script>
-
+<script src="{{ asset('assets/vendor_components/countdown/countdown.js') }}"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
@@ -866,6 +889,9 @@ $(document).ready(function() {
         console.log(Id);
         //setTimeout(function() {
             $('#'+Id).toggleClass('collapse').toggleClass('in');
+            $('#'+Id).find('ul.navbar-nav').css('flex-direction', function(index, value) {
+                return value === 'column' ? 'row' : 'column';
+            });
         //}, 1000);
         
     })

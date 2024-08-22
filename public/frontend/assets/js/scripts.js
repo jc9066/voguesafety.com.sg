@@ -224,6 +224,9 @@ jQuery(".sidebar-carousel").owlCarousel({
 jQuery(".brand-slider").owlCarousel({
     items : 6,
     navigation : true,
+    itemsMobile:[400,2],
+    itemsTablet:[500,2],
+    itemsDesktopSmall :[979,4],
     slideSpeed : 300,
     pagination: true,
     paginationSpeed : 400,

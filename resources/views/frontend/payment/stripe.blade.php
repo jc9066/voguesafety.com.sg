@@ -35,7 +35,7 @@ Stripe Payment Page
 
 
 <div class="breadcrumb">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
 				<li><a href="home.html">Home</a></li>
@@ -49,7 +49,7 @@ Stripe Payment Page
 
 
 <div class="body-content">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="checkout-box ">
 			<div class="row">
 				 

@@ -3,29 +3,6 @@
 @section('title')
 Vogue Safety
 @endsection
-<style>
-    .line-with-text {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin: 20px 0;
-    }
-
-    .line-with-text::before,
-    .line-with-text::after {
-        content: '';
-        flex: 1;
-        border-bottom: 1px solid lightgrey;
-    }
-
-    .line-with-text::before {
-        margin-right: 10px;
-    }
-
-    .line-with-text::after {
-        margin-left: 10px;
-    }
-</style>
 <div id="hero">
   <div> 
     <img 
@@ -235,26 +212,5 @@ When trying on safety shoes, it becomes clear very quickly whether or not they f
       >
     </a>
   </div>
-</div>
-
-<div class="container py-5">
-  <div class="line-with-text" style="color: lightgrey;">Vogue Safety Partners</div>
-</div>
-<div class="container-fluid pb-5">
-  <section class="section wow new-arriavls">
-    <div id="brands-carousel" class="logo-slider wow">
-      <div class="logo-slider-inner">
-        <div id="brand-slider" class="owl-carousel brand-slider custom-carousel owl-theme">
-          <div class="item m-t-15"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner1.png') }}" src="{{ asset('frontend/assets/img/partner/partner1.png') }}" alt=""> </a> </div>
-          <div class="item m-t-10"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner2.png') }}" src="{{ asset('frontend/assets/img/partner/partner2.png') }}" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner3.png') }}" src="{{ asset('frontend/assets/img/partner/partner3.png') }}" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner4.png') }}" src="{{ asset('frontend/assets/img/partner/partner4.png') }}" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner5.png') }}" src="{{ asset('frontend/assets/img/partner/partner5.png') }}" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner6.png') }}" src="{{ asset('frontend/assets/img/partner/partner6.png') }}" alt=""> </a> </div>
-          <div class="item"> <a href="#" class="image"> <img data-echo="{{ asset('frontend/assets/img/partner/partner7.png') }}" src="{{ asset('frontend/assets/img/partner/partner7.png') }}" alt=""> </a> </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </div>
 @endsection

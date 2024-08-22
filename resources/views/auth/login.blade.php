@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="breadcrumb">
-    <div class="container">
+    <div class="container-fluid">
         <div class="breadcrumb-inner">
             <ul class="list-inline list-unstyled">
                 <li><a href="home.html">Home</a></li>
@@ -13,7 +13,7 @@
 </div><!-- /.breadcrumb -->
 
 <div class="body-content">
-    <div class="container">
+    <div class="container-fluid">
         <div class="sign-in-page">
             <div class="row">
                 <!-- Sign-in -->            
@@ -128,8 +128,6 @@
 
 
 
-
-@include('frontend.body.brands')
 
 
 <!-- ============================================== BRANDS CAROUSEL : END ============================================== -->    </div><!-- /.container -->

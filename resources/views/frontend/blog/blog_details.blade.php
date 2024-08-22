@@ -22,7 +22,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="blog-page">
-				<div class="col-md-9">
+				<div class="col-md-9 col-sm-12 col-xs-12 ">
 					<div class="blog-post wow fadeInUp">
 	<img class="img-responsive" src="{{ ($blogpost->post_image) }}" alt="">
 	
@@ -101,7 +101,7 @@
 	</div>
 </div>
 				</div>
-				<div class="col-md-3 sidebar">
+				<div class="col-md-3 col-sm-12 col-xs-12 sidebar">
                 
                 
                 
@@ -115,10 +115,6 @@
     </form>
 </div>		
 
-<div class="home-banner outer-top-n outer-bottom-xs">
-<img src="{{ asset('frontend/assets/images/banners/LHS-banner.jpg') }}" alt="Image">
-</div>
-		
 
 		<!-- ======== ====CATEGORY======= === -->
 <div class="sidebar-widget outer-bottom-xs wow fadeInUp">
