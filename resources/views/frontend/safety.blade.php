@@ -36,7 +36,7 @@ Vogue Safety
           {{ asset('frontend/assets/img/safety-hero.png') }} 1200w
       "
       sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 800px) 800px, 100vw"
-      style="z-index:1;width:100%;max-width:1300px;height: calc(100% - 80px);min-height:500px;object-fit:cover;position: absolute;top:0;left:0;"
+      style="z-index:1;width:100%;height: calc(100% - 80px);min-height:500px;object-fit:cover;position: absolute;top:0;left:0;"
       alt="vogue-safety-shoes"
       loading="lazy"
     >

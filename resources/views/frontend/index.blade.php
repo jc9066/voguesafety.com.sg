@@ -14,7 +14,7 @@ Vogue Safety
           {{ asset('frontend/assets/img/home-hero.png') }} 1200w
       "
       sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 800px) 800px, 100vw"
-      style="z-index:1;width:100%;min-height:500px;height:100%;max-width:1300px;object-fit:cover;"
+      style="z-index:1;width:100%;min-height:500px;height:100%;object-fit:cover;"
       alt="vogue-safety-shoes"
       loading="lazy"
     >
